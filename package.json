@@ -1,0 +1,57 @@
+{
+    "author": "Pebble",
+    "dependencies": {},
+    "keywords": [],
+    "name": "casio",
+    "pebble": {
+        "capabilities": [
+            "health"
+        ],
+        "displayName": "Casio",
+        "enableMultiJS": false,
+        "messageKeys": {
+            "dummy": 0
+        },
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "fonts/digital",
+                    "name": "FONT_DIGITAL_42",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "images/bckg",
+                    "name": "CASIO_BCKG",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "fonts/cristal.ttf",
+                    "name": "FONT_CRISTAL_16",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "images/pawprint_green.png",
+                    "name": "GREEN_PAWSTEP",
+                    "targetPlatforms": null,
+                    "type": "png"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+        ],
+        "uuid": "64AF47E3-942B-4B1B-859D-DC3181524C1E",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.5.0"
+}
