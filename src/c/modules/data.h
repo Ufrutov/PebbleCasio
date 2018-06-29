@@ -39,3 +39,5 @@ GBitmap* data_get_green_step();
 void data_update_steps_buffer();
 
 char* data_get_current_steps_buffer();
+
+char* data_get_batter_level();

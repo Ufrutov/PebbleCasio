@@ -16,10 +16,10 @@
         "resources": {
             "media": [
                 {
-                    "file": "fonts/digital",
-                    "name": "FONT_DIGITAL_42",
+                    "file": "images/pawprint_green.png",
+                    "name": "GREEN_PAWSTEP",
                     "targetPlatforms": null,
-                    "type": "font"
+                    "type": "png"
                 },
                 {
                     "file": "images/bckg",
@@ -28,16 +28,16 @@
                     "type": "bitmap"
                 },
                 {
-                    "file": "fonts/cristal.ttf",
-                    "name": "FONT_CRISTAL_16",
+                    "file": "fonts/digital",
+                    "name": "FONT_DIGITAL_42",
                     "targetPlatforms": null,
                     "type": "font"
                 },
                 {
-                    "file": "images/pawprint_green.png",
-                    "name": "GREEN_PAWSTEP",
+                    "file": "fonts/cristal.ttf",
+                    "name": "FONT_CRISTAL_16",
                     "targetPlatforms": null,
-                    "type": "png"
+                    "type": "font"
                 }
             ]
         },

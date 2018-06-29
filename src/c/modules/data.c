@@ -17,6 +17,8 @@ static GFont s_font_small, s_font_big, s_font_med, s_font_cristal, s_font_digita
 static int s_current_steps, s_daily_average, s_current_average;
 static char s_current_steps_buffer[8];
 
+static char s_current_battery_level[4];
+
 static void update_average(AverageType type) {
   // Start time is midnight
   const time_t start = time_start_of_today();
@@ -74,6 +76,9 @@ void data_update_steps_buffer() {
   } else {
     snprintf(s_current_steps_buffer, sizeof(s_current_steps_buffer), "%d", hundreds);
   }
+  
+  int b = battery_state_service_peek().charge_percent;
+  snprintf(s_current_battery_level, sizeof(s_current_battery_level), "%d%%", b);
 
   main_window_redraw();
 }
@@ -170,4 +175,8 @@ GBitmap* data_get_green_step() {
 
 char* data_get_current_steps_buffer() {
   return s_current_steps_buffer;
+}
+
+char* data_get_batter_level() {
+  return s_current_battery_level;
 }

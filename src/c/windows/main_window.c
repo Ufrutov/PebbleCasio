@@ -45,6 +45,7 @@ static void text_update_proc(Layer *layer, GContext *ctx) {
   const GRect layer_bounds = layer_get_bounds(layer);
 
   const GFont font_med = data_get_font(FontSizeMedium);
+  const GFont font_small = data_get_font(FontSizeSmall);
   // const GFont font_large = data_get_font(FontSizeLarge);
   const GFont font_large = data_get_font(FontSizeDigital);
   const GFont font_cristal = data_get_font(FontSizeCristal);
@@ -75,10 +76,18 @@ static void text_update_proc(Layer *layer, GContext *ctx) {
                        GTextOverflowModeWordWrap, GTextAlignmentCenter, NULL);
   }
   
+  // Text: Date
   GRect date_rect = GRect(layer_bounds.origin.x, total_height/2-20,
                      layer_bounds.size.w, 15);
   graphics_draw_text(ctx, s_date, font_cristal, date_rect, 
                      GTextOverflowModeWordWrap, GTextAlignmentCenter, NULL);
+  
+  // Text: Battery level
+  char *b_level = data_get_batter_level();
+  GRect battery_rect = GRect(15, 39,
+                     layer_bounds.size.w/3, 15);
+  graphics_draw_text(ctx, b_level, font_small, battery_rect, 
+                     GTextOverflowModeWordWrap, GTextAlignmentRight, NULL); 
 }
 
 /*********************************** Window ***********************************/
