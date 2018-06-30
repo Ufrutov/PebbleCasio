@@ -17,7 +17,7 @@ static GFont s_font_small, s_font_big, s_font_med, s_font_cristal, s_font_digita
 static int s_current_steps, s_daily_average, s_current_average;
 static char s_current_steps_buffer[8];
 
-static char s_current_battery_level[4];
+static char s_current_battery_level[5];
 
 static void update_average(AverageType type) {
   // Start time is midnight
